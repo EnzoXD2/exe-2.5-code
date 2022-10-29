@@ -203,7 +203,7 @@ class StoryMenuState extends MusicBeatState
 		addVirtualPad(LEFT_FULL, A_B)
 		#end
 
-		super.create();
+		super.create()
 	}
 
 	function changediff(diff:Int = 1)
