@@ -200,10 +200,10 @@ class StoryMenuState extends MusicBeatState
 		sprDifficulty.y = leftArrow.y + 10;
 		
 		#if android
-		addVirtualPad(LEFT_FULL, A_B)
+		addVirtualPad(LEFT_FULL, A_B);
 		#end
 
-		super.create()
+		super.create();
 	}
 
 	function changediff(diff:Int = 1)
