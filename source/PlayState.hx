@@ -1897,6 +1897,10 @@ class PlayState extends MusicBeatState
 		noteTypeMap = null;
 		eventPushedMap.clear();
 		eventPushedMap = null;
+		
+		#if android
+		addAndroidControls();
+		#end
 
 		// After all characters being loaded, it makes then invisible 0.01s later so that the player won't freeze when you change characters
 		// add(strumLine);
@@ -2262,6 +2266,12 @@ class PlayState extends MusicBeatState
 		timeBar.cameras = [camHUD];
 		timeBarBG.cameras = [camHUD];
 		timeTxt.cameras = [camHUD];
+		
+		#if android
+		addAndroidControls();
+		androidControls.visible = true;
+		#end
+
 		if (dad.curCharacter == 'starved')
 		{
 			fearUiBg.cameras = [camHUD];
